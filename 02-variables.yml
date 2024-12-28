@@ -1,0 +1,9 @@
+- name: ansible demo
+  hosts: localhost
+  connection: local
+
+- vars:
+    URL: vars.sathu.google.com
+- tasks:
+    ansible.builtin.debug:
+      msg: URL is {{ URL }}
