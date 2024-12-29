@@ -7,3 +7,9 @@
     - name: using filters
       ansible.builtin.debug:
         msg: "{{ x | split(',') | first }}"
+
+    - name: using filters case_1
+      ansible.builtin.debug:
+        msg: "{{ split[1] }}"
+      vars:
+        split: "{ { x | split(',') } }"
