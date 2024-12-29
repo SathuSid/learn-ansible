@@ -8,20 +8,20 @@
     ansible.builtin.debug:
       msg: URL is {{ URL }}
 
-#- name: print url demo-from task
-#  hosts: localhost
-#  connection: local
-#  tasks:
-#    name: print url
-#    ansible.builtin.debug:
-#      msg: URL provided in task is {{ URL }}
-#    vars:
-#        URL: taskurl.google.com
-#
-#- name: print url from task
-#  hosts: localhost
-#  connection: local
-#  roles:
-#    sample
+- name: print url demo-from task
+  hosts: localhost
+  connection: local
+  tasks:
+    name: print url
+    ansible.builtin.debug:
+      msg: URL provided in task is {{ URL }}
+    vars:
+        URL: taskurl.google.com
+
+- name: print url from task
+  hosts: localhost
+  connection: local
+  roles:
+    sample
 
 
