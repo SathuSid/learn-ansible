@@ -5,7 +5,7 @@
   connection: local
   become: yes
   vars:
-    to-install: true
+    to_install: true
   tasks:
     - name: print OS Redhat
       ansible.builtin.debug:
@@ -19,7 +19,7 @@
 
     - name: Boolean condition
       ansible.builtin.debug:
-        msg: to-install is true
-      when: to-install
+        msg: "to-install is true"
+      when: to_install
 
 
