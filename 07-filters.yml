@@ -12,4 +12,4 @@
       ansible.builtin.debug:
         msg: "{{ split[1] }}"
       vars:
-        split: "{ { x | split(',') } }"
+        split: "{{ x | split(',') }}"
