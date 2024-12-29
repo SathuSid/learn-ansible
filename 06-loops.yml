@@ -16,3 +16,4 @@
       loop:
         - { name: apple, quantity: 25 }
         - { name: banana, quantity: 12 }
+      when: item.quantity > 20
