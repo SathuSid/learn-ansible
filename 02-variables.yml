@@ -3,21 +3,22 @@
   connection: local
   vars:
     URL: vars.sathu.google.com
-
-- tasks:
+  tasks:
   - name: print url
     hosts: localhost
     connection: local
     ansible.builtin.debug:
       msg: URL is {{ URL }}
 
-- name: print url from task
+- name: print url demo-from task
   hosts: localhost
   connection: local
-  ansible.builtin.debug:
-    msg: URL provided in task is {{ URL }}
-    vars:
-      URL: taskurl.google.com
+  tasks:
+    name: print url
+    ansible.builtin.debug:
+      msg: URL provided in task is {{ URL }}
+      vars:
+        URL: taskurl.google.com
 
 - name: print url from task
   hosts: localhost
