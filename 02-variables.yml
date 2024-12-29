@@ -12,11 +12,11 @@
   hosts: localhost
   connection: local
   tasks:
-    name: print url
-    ansible.builtin.debug:
-      msg: URL provided in task is {{ URL }}
-    vars:
-        URL: taskurl.google.com
+    - name: print url
+      ansible.builtin.debug:
+        msg: URL provided in task is {{ URL }}
+      vars:
+          URL: taskurl.google.com
 
 - name: print url from task
   hosts: localhost
