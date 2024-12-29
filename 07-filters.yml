@@ -1,0 +1,9 @@
+- name: filters demo
+  hosts: localhost
+  connection: local
+  vars:
+    x: 1, 2, 3
+  tasks:
+    - name: using filters
+      ansible.builtin.debug:
+        msg: "{{ x | split(',') | first }}"
