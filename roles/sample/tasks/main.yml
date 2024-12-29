@@ -5,3 +5,5 @@
 - name: get the url
   ansible.builtin.debug:
     msg: url is {{ URL }}
+
+- name: get the url from task
