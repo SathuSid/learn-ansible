@@ -1,0 +1,14 @@
+# conditions to define whether to skip it or not
+
+- name: demo on condition
+  hosts: localhost
+  connection: local
+  become: yes
+  tasks:
+    - name: print OS Redhat
+      ansible.builtin.debug:
+        msg: Redhat
+
+    - name: print OS Ubuntu
+      ansible.builtin.debug:
+        msg: Ubuntu
