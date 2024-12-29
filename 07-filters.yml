@@ -13,3 +13,7 @@
         msg: "{{ split[1] }}"
       vars:
         split: "{{ x | split(',') }}"
+
+    - name: using filters case_2
+    - ansible.builtin.debug:
+    - msg: "{{ x.split(',')[1] }}"
