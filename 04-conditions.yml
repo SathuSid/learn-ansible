@@ -4,6 +4,8 @@
   hosts: localhost
   connection: local
   become: yes
+  vars:
+    to-install: true
   tasks:
     - name: print OS Redhat
       ansible.builtin.debug:
@@ -14,3 +16,10 @@
       ansible.builtin.debug:
         msg: Ubuntu
       when: os == "ubuntu"
+
+    - name: Boolean condition
+      ansible.builtin.debug:
+        msg: to-install is true
+      when: to-install
+
+
