@@ -18,7 +18,7 @@
       vars:
           URL: taskurl.google.com
 
-- name: print url from task
+- name: print default url
   hosts: localhost
   connection: local
   roles:
