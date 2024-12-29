@@ -24,4 +24,20 @@
   roles:
     - sample
 
+- name: demo on registered variable
+  hosts: localhost
+  connection: local
+  become: yes
+  tasks:
+    - name: check a package
+      ansible.builtin.dnf:
+        name: zlib
+        state: installed
+      register: out
+
+    - name: print out
+      ansible.builtin.debug:
+        msg: "{{ out }}"
+
+
 
