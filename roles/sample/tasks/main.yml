@@ -6,4 +6,6 @@
   ansible.builtin.debug:
     msg: url is {{ URL }}
 
-- name: get the url from task
+- name: get the url default
+  ansible.builtin.debug:
+    msg: default url example is {{ Example }}

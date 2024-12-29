@@ -15,3 +15,8 @@
         vars:
           URL: taskurl.google.com
 
+    - name: print url from task
+      roles:
+        sample
+
+
