@@ -41,3 +41,24 @@
 
 
 
+## Variable types:
+#1. Plain Variable
+#     url: example.com
+#2. List Variable
+##     url:
+#      - url1.com
+#      - url2.com
+##3. Map Variable
+#      domain.urls:
+#        test: test.com
+#        dev: dev.com
+
+
+#
+##variable supported data types:
+#1. String
+#2. Number
+#3. Boolean
+
+
+
