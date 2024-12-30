@@ -7,6 +7,6 @@
       notify: get notified
 
       handlers:
-        name: get notified
-        ansible.builtin.debug:
-          msg: Iam notified
+        - name: get notified
+          ansible.builtin.debug:
+           msg: Iam notified
