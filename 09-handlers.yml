@@ -5,7 +5,7 @@
     - name: install zlib
       ansible.builtin.shell: ls
       notify:
-        - get notified
+        - say hi
 
   handlers:
     - name: say hi
