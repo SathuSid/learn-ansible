@@ -4,7 +4,8 @@
   tasks:
     - name: install zlib
       ansible.builtin.shell: ls
-      notify: get notified
+      notify:
+        - get notified
 
       handlers:
         - name: get notified
