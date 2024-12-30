@@ -3,6 +3,10 @@
   connection: local
   tasks:
     - name: install zlib
-      ansible.builtin.dnf:
-        name: zlib
-        state: installed
+      ansible.builtin.shell: ls
+      notify: get notified
+
+      handlers:
+        name: get notified
+        ansible.builtin.debug:
+          msg: Iam notified
